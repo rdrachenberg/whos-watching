@@ -1,0 +1,69 @@
+body {
+	background-color: #333333;
+	margin: 0px;
+	padding: 0px;
+	color: #FFFFFF;
+}
+.sort-controls{
+	height: 100px;
+	width: 100%;
+	background-color: #ccc;
+	border-radius: 5px;
+	align-content: left;
+	color: #000;
+}
+
+label {
+	margin-left: 5px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+ti {
+	width: 100%;
+	font-size: 50px;
+
+}
+
+.title-header {
+	font-size: 17px;
+	text-align: left;
+	background-color: #7AC7AC;
+	width: 95%;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 20px;
+	min-width: 300px;
+}
+
+h1 {
+	margin: 0 0 10px 0;
+	padding: 10px;
+	font-size: 40px;
+	background-color: black;
+	color: #7AC7AC;
+	border-radius: 10px;
+}
+
+table {
+	margin: 10px;
+}
+
+th,
+td {
+	padding: 5px;
+	border: 1px solid #999;
+}
+
+th {
+	background: #ccc;
+}
+
+tr:nth-child(odd) {
+	background: #eee;
+}
+
+td a {
+	color: #000;
+	text-decoration: underline;
+}

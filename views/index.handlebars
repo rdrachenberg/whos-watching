@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center" id="top-bar">
+			<h1>Who's Watching the Student? </h1>
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="sort-controls">
+						<label for="zip">Enter Zip: </label>
+						<input id="zip" type="text" value="78045" >
+						<input type="submit" value="Search" onclick="goToPage();" />
+						<script type="text/javascript">
+							function goToPage() {
+								const zip = document.getElementById('zip').value;
+								window.location = "http://localhost:3000/students/sort/" + zip;
+							}
+						</script>	
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="row">
+					{{#each student}}
+					<div class="col-md-4">
+						<div class="title-header">
+							<th>Id:</th> <td>{{this.id}}</td>
+							<br />
+							<td>First Name: {{this.first_name}} {{this.Student.first_name}}</td>
+							<br />
+							<td>Last Name: {{this.last_name}} {{this.Student.last_name}}</td>
+							<br />
+							<td>DOB: {{this.DOB}}{{this.Student.DOB}}</td>
+							<br />
+							<td>Address: {{this.SampleDatum.address}} {{this.address}}</td>
+							<br />
+							<td>{{this.SampleDatum.city}}{{this.city}}, {{this.SampleDatum.state}} {{this.state}} {{this.SampleDatum.zip}}{{this.zip}}</td>
+							<br />
+							<td>County: {{this.SampleDatum.county}} {{this.county}}, USA</td>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div> 
+		</div>
+	</div>
+</div> 	
