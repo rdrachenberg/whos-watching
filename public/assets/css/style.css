@@ -5,18 +5,29 @@ body {
 	color: #FFFFFF;
 }
 .sort-controls{
-	height: 100px;
-	width: 100%;
+	height: 150px;
+	width: 95%;
 	background-color: #ccc;
 	border-radius: 5px;
-	align-content: left;
+	align-content: center;
 	color: #000;
+	text-align: center;
+	margin: auto;
+	position: sticky;
 }
+.image-eye {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	position: relative;
+}
+
 
 label {
 	margin-left: 5px;
 	margin-top: 10px;
-	padding: 5px;
+	padding: 2px;
 }
 
 ti {
@@ -43,6 +54,7 @@ h1 {
 	background-color: black;
 	color: #7AC7AC;
 	border-radius: 10px;
+	position: sticky;
 }
 
 table {

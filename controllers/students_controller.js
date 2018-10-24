@@ -59,6 +59,53 @@ router.get("/students/sort/:zip", function (req, res) {
             return res.render("index", hbsObject);
         })
         });
+        
+router.get("/students/sort/fname/:first_name", function (req, res) {
+    db.Student.findAll({
+        where: {
+        first_name: [req.params.first_name]
+        },
+        include: [db.SampleData],
+        
+    // return our first in ordered by ascending last_name
+        order: [
+            ["last_name", "ASC"]
+            ]
+    })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+            
+            return res.render("index", hbsObject);
+        })
+});
+router.get("/students/sort/lname/:last_name", function (req, res) {
+    db.Student.findAll({
+        where: {
+        last_name: [req.params.last_name]
+        },
+        include: [db.SampleData],
+        
+    // return our first in ordered by ascending last_name
+        order: [
+            ["last_name", "ASC"]
+            ]
+    })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+            
+            return res.render("index", hbsObject);
+        })
+});
 
 router.post("/", function (req, res) {
     student.insertOne("name",
