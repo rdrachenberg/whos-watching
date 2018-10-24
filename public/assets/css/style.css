@@ -4,6 +4,7 @@ body {
 	padding: 0px;
 	color: #FFFFFF;
 }
+
 .sort-controls{
 	height: 150px;
 	width: 95%;
@@ -14,13 +15,16 @@ body {
 	text-align: center;
 	margin: auto;
 	position: sticky;
+	top: 0;
 }
 .image-eye {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
-	position: relative;
+	position: absolute;
+	border-radius: 10px;
+
 }
 
 
@@ -45,6 +49,7 @@ ti {
 	padding: 10px;
 	border-radius: 20px;
 	min-width: 300px;
+	position: relative;
 }
 
 h1 {
