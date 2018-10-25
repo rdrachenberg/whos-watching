@@ -11,7 +11,7 @@
 			<div class="sort-controls">
 				<div class="col-md-12">
 					<label for="zip">Search by Zip Code:  </label>
-					<input id="zip" type="text" placeholder="78045" >
+					<input id="zip" type="text" placeholder="78045" onkeyup="listenEnterKey();" >
 					<input type="submit" value="Search" onclick="sortByZip();" />
 				</div>
 				<div class="col-md-12">
@@ -28,6 +28,14 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		function listenEnterKey(e, useCapture) {
+			(e).preventDefault(); 
+			(useCapture): false;
+			if {}
+			const zip = getElementById('zip').value;
+			window.location = "/students/sort" + zip;
+		}
+		
 		function sortByZip() {
 			const zip = document.getElementById('zip').value;
 			window.location = "/students/sort/" + zip;
