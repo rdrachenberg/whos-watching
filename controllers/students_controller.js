@@ -106,6 +106,31 @@ router.get("/students/sort/lname/:last_name", function (req, res) {
             return res.render("index", hbsObject);
         })
 });
+router.get("/students/sort/state/:state", function (req, res) {
+    db.SampleData.findAll({
+        where: {
+            state: {
+            [Op.notLike]: [req.params.state]
+            }
+        },
+        include: [db.Student],
+        
+    // return our first in ordered by ascending state
+        order: [
+            ["state", "ASC"]
+            ]
+    })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+            
+            return res.render("index", hbsObject);
+        })
+});
 
 router.post("/", function (req, res) {
     student.insertOne("name",
