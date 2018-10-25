@@ -8,12 +8,13 @@ body {
 .sort-controls{
 	height: 160px;
 	width: 95%;
-	background-color: #ccc;
+	background-color: GhostWhite;
 	border-radius: 5px;
 	align-content: center;
 	color: #000;
 	text-align: center;
 	margin: auto;
+	opacity:0.95;
 	position: sticky;
 	top: 0;
 
