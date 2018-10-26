@@ -12,3 +12,32 @@
 * MVC Pattern Used
 
 <img src="https://media.giphy.com/media/xT8qB0cQ6Zachrok7K/giphy.gif" width="300" height="200" />
+
+### File Structure:
+<pre>
+|-config
+    |—-config.json
+|-controllers
+    |—-students_controller
+|-db
+|-models
+    |—-index
+    |—-sampleData
+    |—-students
+|-node_modules
+|-public
+    |—assets
+        |-css
+            |—-style
+        |-js
+            |—-scripts
+        |--favicon
+|-views
+    |-layouts
+        |--main.handlebars
+    |—index.handlebars
+|--package.json
+|--Procfile
+|--README.md
+|--server.js
+</pre>
