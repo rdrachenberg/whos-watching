@@ -35,6 +35,31 @@ router.get("/students", function (req, res) {
         });
 });
 
+router.get("/students/sort/id/:id", function (req, res) {
+    db.SampleData.findAll({
+
+            where: {
+                id: [req.params.id]
+            },
+            include: [db.Student],
+
+            // Here we specify we want to return our burgers in ordered by ascending burger_name
+            // order: [
+            //     ["last_name", "ASC"]
+            //     ]
+        })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+
+            return res.render("index", hbsObject);
+        })
+});
+
 router.get("/students/sort/:zip", function (req, res) {
     db.SampleData.findAll({
         
@@ -47,18 +72,18 @@ router.get("/students/sort/:zip", function (req, res) {
         // order: [
         //     ["last_name", "ASC"]
         //     ]
-        })
-        // use promise method to pass the students...
-        .then(function (dbStudent) {
-            // into the main index, updating the page
-            var hbsObject = {
-                student: dbStudent
-            };
-            console.log(hbsObject);
+    })
+    // use promise method to pass the students...
+    .then(function (dbStudent) {
+        // into the main index, updating the page
+        var hbsObject = {
+        student: dbStudent
+        };
+        console.log(hbsObject);
             
-            return res.render("index", hbsObject);
-        })
-        });
+        return res.render("index", hbsObject);
+    })
+});
         
 router.get("/students/sort/fname/:first_name", function (req, res) {
     db.Student.findAll({
@@ -118,6 +143,52 @@ router.get("/students/sort/state/:state", function (req, res) {
     // return our first in ordered by ascending state
         order: [
             ["state", "ASC"]
+            ]
+    })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+            
+            return res.render("index", hbsObject);
+        })
+});
+router.get("/students/sort/state_sort/:state", function (req, res) {
+    db.SampleData.findAll({
+        where: {
+            state: [req.params.state]
+        },
+        include: [db.Student],
+        
+    // return our first in ordered by ascending state
+        order: [
+            ["state", "ASC"]
+            ]
+    })
+        // use promise method to pass the students...
+        .then(function (dbStudent) {
+            // into the main index, updating the page
+            var hbsObject = {
+                student: dbStudent
+            };
+            console.log(hbsObject);
+            
+            return res.render("index", hbsObject);
+        })
+});
+router.get("/students/sort/dob/:dob", function (req, res) {
+    db.Student.findAll({
+        where: {
+            dob: [req.params.dob]
+        },
+        include: [db.SampleData],
+        
+    // return our first in ordered by ascending state
+        order: [
+            ["dob", "ASC"]
             ]
     })
         // use promise method to pass the students...
