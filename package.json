@@ -1,5 +1,5 @@
 {
-  "name": "node_what_todo",
+  "name": "whos-watching",
   "version": "1.0.0",
   "description": "-Node \r -Express \r -MySQL \r -Handlebars \r -Jquery",
   "main": "server.js",
@@ -8,7 +8,7 @@
     "run": "node server.js",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Ryan Drachenberg",
   "license": "ISC",
   "dependencies": {
     "4": "^0.0.0",
