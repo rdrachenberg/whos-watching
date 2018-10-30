@@ -17,6 +17,8 @@ body {
 	opacity:0.95;
 	position: relative;
 	top: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
 
 }
 input#address {
@@ -58,6 +60,7 @@ input {
 	margin-right: 6%;
 	position: absolute;
 	border-radius: 15px;
+	height: 210px;
 }
 
 
@@ -95,6 +98,13 @@ h1 {
 	color: #7AC7AC;
 	border-radius: 10px;
 	position: relative;
+}
+
+h1:hover {
+	/* font-weight: bold; */
+	color: whitesmoke;
+	text-decoration: underline;
+	opacity: 20%;
 }
 
 table {
