@@ -6,7 +6,7 @@ body {
 }
 
 .sort-controls{
-	height: 140px;
+	height: 150px;
 	width: 95%;
 	background-color: silver;
 	border-radius: 15px;
@@ -19,6 +19,8 @@ body {
 	top: 0;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 input#address {
@@ -50,7 +52,16 @@ input {
 	background-color: black;
 	color: GhostWhite;
 	border-radius: 5px;
+	border-color:#7AC7AC;
 	width: 75px;
+
+}
+
+#sort-button:hover {
+	background-color: #7AC7AC;
+	border-color:#7AC7AC;
+	font-weight: 465;
+	
 }
 
 .image-eye {
@@ -88,6 +99,8 @@ ti {
 	border-radius: 20px;
 	min-width: 300px;
 	position: relative;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h1 {
